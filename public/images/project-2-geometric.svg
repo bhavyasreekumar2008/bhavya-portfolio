@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 800" width="100%" height="100%">
+  <defs>
+    <linearGradient id="geoBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#F2F2F0" />
+      <stop offset="100%" stop-color="#E5E5E2" />
+    </linearGradient>
+  </defs>
+
+  <rect width="1000" height="800" fill="url(#geoBg)" />
+
+  <!-- Outer Black Gallery Frame Mat (Like the Reference top-right spread) -->
+  <rect x="60" y="60" width="880" height="680" fill="#1C1C1B" rx="2" />
+
+  <!-- Inner 3 Architectural Panels -->
+  <!-- Panel 1: Geometric Rectangles & Circle -->
+  <g transform="translate(100, 100)">
+    <rect width="240" height="600" fill="#F7F7F5" />
+    <circle cx="120" cy="180" r="45" fill="none" stroke="#111111" stroke-width="4" />
+    <line x1="40" y1="180" x2="200" y2="180" stroke="#111111" stroke-width="2" />
+    <rect x="75" y="260" width="90" height="180" fill="#111111" />
+    <line x1="120" y1="100" x2="120" y2="520" stroke="#111111" stroke-width="1.5" stroke-dasharray="4,4" />
+    <circle cx="120" cy="480" r="24" fill="#C8B79E" />
+    <text x="120" y="560" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" font-weight="700" letter-spacing="2" fill="#666666">PLATE 2A</text>
+  </g>
+
+  <!-- Panel 2: Offset Cubes & Structural Diagonals -->
+  <g transform="translate(380, 100)">
+    <rect width="240" height="600" fill="#F7F7F5" />
+    <polygon points="60,160 180,120 180,240 60,280" fill="#DCDCDA" stroke="#111111" stroke-width="3" />
+    <polygon points="180,120 200,90 200,210 180,240" fill="#111111" />
+    <circle cx="120" cy="360" r="50" fill="#2E2E2D" />
+    <line x1="50" y1="360" x2="190" y2="360" stroke="#FFFFFF" stroke-width="2" />
+    <line x1="120" y1="290" x2="120" y2="430" stroke="#FFFFFF" stroke-width="2" />
+    <rect x="80" y="440" width="80" height="60" fill="none" stroke="#111111" stroke-width="2" />
+    <text x="120" y="560" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" font-weight="700" letter-spacing="2" fill="#666666">PLATE 2B</text>
+  </g>
+
+  <!-- Panel 3: Concentric Arches & Minimal Column -->
+  <g transform="translate(660, 100)">
+    <rect width="240" height="600" fill="#F7F7F5" />
+    <!-- Classical arch constructivism -->
+    <path d="M 60,260 L 60,200 C 60,140 180,140 180,200 L 180,260 Z" fill="none" stroke="#111111" stroke-width="5" />
+    <path d="M 85,260 L 85,200 C 85,160 155,160 155,200 L 155,260 Z" fill="#C8B79E" opacity="0.6" />
+    <circle cx="120" cy="330" r="35" fill="#111111" />
+    <line x1="60" y1="400" x2="180" y2="400" stroke="#111111" stroke-width="3" />
+    <line x1="60" y1="420" x2="180" y2="420" stroke="#111111" stroke-width="1.5" />
+    <line x1="60" y1="440" x2="180" y2="440" stroke="#111111" stroke-width="1" />
+    <line x1="60" y1="460" x2="180" y2="460" stroke="#111111" stroke-width="0.5" />
+    <text x="120" y="560" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" font-weight="700" letter-spacing="2" fill="#666666">PLATE 2C</text>
+  </g>
+</svg>

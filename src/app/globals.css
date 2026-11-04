@@ -1,0 +1,179 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --canvas-bg: #EDEDED;
+    --surface-paper: #F6F6F4;
+    --surface-paper-secondary: #EFEFEA;
+    --ink-primary: #111111;
+    --pencil-secondary: #6B6B6B;
+    --hairline: #D9D9D6;
+    --hairline-subtle: #E8E8E4;
+    --accent-taupe: #C8B79E;
+    --accent-taupe-dark: #A9957B;
+    --accent-taupe-light: #E8DFD3;
+    --shadow-spine: inset 10px 0 20px -10px rgba(0, 0, 0, 0.08), inset -10px 0 20px -10px rgba(0, 0, 0, 0.08);
+  }
+
+  .dark {
+    --canvas-bg: #0E0E0E;
+    --surface-paper: #161616;
+    --surface-paper-secondary: #1F1F1F;
+    --ink-primary: #F2F2F0;
+    --pencil-secondary: #9E9E99;
+    --hairline: #2A2A28;
+    --hairline-subtle: #222220;
+    --accent-taupe: #D2C4B0;
+    --accent-taupe-dark: #B0A08B;
+    --accent-taupe-light: #3D372E;
+    --shadow-spine: inset 10px 0 20px -10px rgba(0, 0, 0, 0.4), inset -10px 0 20px -10px rgba(0, 0, 0, 0.4);
+  }
+
+  html {
+    scroll-behavior: auto; /* Handled smoothly by Lenis */
+    background-color: var(--canvas-bg);
+    color: var(--ink-primary);
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  body {
+    background-color: var(--canvas-bg);
+    color: var(--ink-primary);
+    overflow-x: hidden;
+    selection-background-color: var(--accent-taupe);
+    selection-color: #111111;
+  }
+}
+
+/* Swiss Editorial Micro-Typography & Grid Utilities */
+.tracking-display {
+  letter-spacing: -0.045em;
+}
+
+.tracking-meta {
+  letter-spacing: 0.18em;
+}
+
+.book-spread {
+  background-color: var(--surface-paper);
+  box-shadow: 0 20px 45px -15px rgba(0, 0, 0, 0.07), 0 0 1px rgba(0, 0, 0, 0.1);
+}
+
+.book-gutter-spine {
+  position: relative;
+}
+
+.book-gutter-spine::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 1px;
+  background-color: var(--hairline);
+  box-shadow: var(--shadow-spine);
+  pointer-events: none;
+  z-index: 10;
+}
+
+/* Grayscale Exhibition Filter with Hover Saturation Transition */
+.gallery-image-frame {
+  position: relative;
+  overflow: hidden;
+  background-color: #EAEAEA;
+}
+
+.gallery-image-frame img,
+.gallery-image-frame svg {
+  filter: grayscale(100%) contrast(105%);
+  transition: filter 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.gallery-image-frame:hover img,
+.gallery-image-frame:hover svg {
+  filter: grayscale(0%) contrast(100%);
+  transform: scale(1.025);
+}
+
+/* Swiss Underline Slide on Hover */
+.swiss-link {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.swiss-link::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: currentColor;
+  transform: scaleX(0);
+  transform-origin: right bottom;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.swiss-link:hover::after {
+  transform: scaleX(1);
+  transform-origin: left bottom;
+}
+
+/* Custom Scrollbar for Catalog */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--canvas-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--hairline);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--pencil-secondary);
+}
+
+/* Print simulation textures */
+.editorial-grid-line {
+  background-color: var(--hairline);
+}
+
+/* Custom Cursor styles */
+.custom-cursor-dot {
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  border-radius: 9999px;
+  transform: translate(-50%, -50%);
+  transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1), 
+              height 0.3s cubic-bezier(0.16, 1, 0.3, 1), 
+              background-color 0.2s, 
+              border 0.2s;
+}
+
+/* Lenis Recommended CSS */
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}

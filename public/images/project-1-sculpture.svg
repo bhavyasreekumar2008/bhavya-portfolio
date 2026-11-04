@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 800" width="100%" height="100%">
+  <defs>
+    <radialGradient id="galleryLight" cx="50%" cy="20%" r="80%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="60%" stop-color="#E8E8E6" />
+      <stop offset="100%" stop-color="#D0D0CC" />
+    </radialGradient>
+    <linearGradient id="sculptureBody" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FAFAFA" />
+      <stop offset="40%" stop-color="#E0E0DC" />
+      <stop offset="85%" stop-color="#737370" />
+      <stop offset="100%" stop-color="#262625" />
+    </linearGradient>
+    <linearGradient id="taupeTint" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#C8B79E" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#E2D7C5" stop-opacity="0" />
+    </linearGradient>
+  </defs>
+
+  <!-- Gallery exhibition wall -->
+  <rect width="1000" height="800" fill="url(#galleryLight)" />
+  <rect width="1000" height="800" fill="url(#taupeTint)" />
+  <line x1="0" y1="620" x2="1000" y2="620" stroke="#C4C4C0" stroke-width="1.5" />
+  <polygon points="0,620 1000,620 1000,800 0,800" fill="#E2E2DF" />
+
+  <!-- Exhibition Plinth -->
+  <polygon points="340,560 660,560 620,740 380,740" fill="#D5D5D2" />
+  <polygon points="340,560 660,560 640,530 360,530" fill="#EAEAE8" />
+
+  <!-- Organic Minimalist Torus / Loop Sculpture (Homage to reference middle-right spread) -->
+  <g transform="translate(500, 380)">
+    <!-- Main loop -->
+    <path d="M 0,-180 C 130,-180 200,-90 200,30 C 200,160 110,210 0,210 C -110,210 -200,160 -200,30 C -200,-90 -130,-180 0,-180 Z" fill="url(#sculptureBody)" />
+    <!-- Center elliptical void -->
+    <ellipse cx="0" cy="20" rx="90" ry="110" fill="#E5E5E2" />
+    <!-- Dynamic twist shadow -->
+    <path d="M -90,20 C -70,-60 -20,-110 0,-110 C 30,-110 80,-40 90,20 C 60,90 20,130 0,130 C -30,130 -70,80 -90,20 Z" fill="#202020" opacity="0.85" />
+    <!-- Front sweeping white curve -->
+    <path d="M -160,10 C -140,-120 0,-160 40,-120 C 90,-70 120,40 10,170 C -70,120 -150,70 -160,10 Z" fill="#F8F8F6" opacity="0.9" />
+  </g>
+
+  <!-- Technical Computer Vision Kernel Grid Overlay -->
+  <g stroke="#111111" stroke-width="0.75" opacity="0.4">
+    <line x1="80" y1="80" x2="280" y2="80" />
+    <line x1="80" y1="120" x2="280" y2="120" />
+    <line x1="80" y1="160" x2="280" y2="160" />
+    <line x1="80" y1="80" x2="80" y2="160" />
+    <line x1="146" y1="80" x2="146" y2="160" />
+    <line x1="213" y1="80" x2="213" y2="160" />
+    <line x1="280" y1="80" x2="280" y2="160" />
+  </g>
+  <circle cx="146" cy="120" r="4" fill="#C8B79E" />
+  <text x="80" y="65" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="700" letter-spacing="2" fill="#111111">FEATURE MAP // KERNEL 3x3</text>
+  <text x="920" y="760" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="11" letter-spacing="2" fill="#666666">EXHIBITION PLATE 01</text>
+</svg>

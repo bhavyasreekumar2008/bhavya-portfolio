@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="100%" height="100%">
+  <defs>
+    <linearGradient id="portraitBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ECECEC" />
+      <stop offset="100%" stop-color="#D2D2CF" />
+    </linearGradient>
+    <linearGradient id="faceShade" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#E8E8E6" />
+      <stop offset="50%" stop-color="#C2C2BF" />
+      <stop offset="100%" stop-color="#555552" />
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="1000" fill="url(#portraitBg)" />
+  <rect x="40" y="40" width="720" height="920" fill="none" stroke="#D9D9D6" stroke-width="1.5" />
+
+  <!-- Clean Editorial Studio Silhouette / Portrait of Bhavya Sreekumar -->
+  <g transform="translate(400, 520)">
+    <!-- Shoulders / Torso in dark architectural jacket -->
+    <path d="M -260,380 C -250,220 -160,180 -90,140 L 90,140 C 160,180 250,220 260,380 Z" fill="#1C1C1B" />
+    <!-- High architectural collar -->
+    <path d="M -80,140 L 0,180 L 80,140 L 60,60 L -60,60 Z" fill="#2E2E2D" />
+    <polygon points="-30,90 0,160 30,90" fill="#EAEAEA" />
+    <!-- Neck -->
+    <rect x="-42" y="30" width="84" height="60" fill="#C5C5C2" />
+    <!-- Head silhouette with soft studio shadow -->
+    <ellipse cx="0" cy="-60" rx="100" ry="135" fill="url(#faceShade)" />
+    <!-- Hair structure -->
+    <path d="M -105,-70 C -115,-180 -50,-215 0,-215 C 50,-215 115,-180 105,-70 C 110,-10 90,60 70,80 C 50,50 60,-40 50,-80 C 10,-130 -60,-130 -80,-50 C -90,-20 -70,50 -70,80 C -90,60 -110,-10 -105,-70 Z" fill="#151515" />
+    <!-- Minimalist glasses rim -->
+    <circle cx="-42" cy="-65" r="28" fill="none" stroke="#111111" stroke-width="3.5" />
+    <circle cx="42" cy="-65" r="28" fill="none" stroke="#111111" stroke-width="3.5" />
+    <line x1="-14" y1="-65" x2="14" y2="-65" stroke="#111111" stroke-width="3.5" />
+  </g>
+
+  <!-- Swiss catalog meta stamps -->
+  <line x1="60" y1="70" x2="120" y2="70" stroke="#111111" stroke-width="2" />
+  <text x="60" y="100" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="700" letter-spacing="3" fill="#111111">PLATE 01 // PORTRAIT</text>
+  <text x="60" y="120" font-family="Helvetica, Arial, sans-serif" font-size="10" letter-spacing="1.5" fill="#6B6B6B">BHAVYA SREEKUMAR // THRISSUR, KERALA</text>
+  <text x="740" y="930" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="10" letter-spacing="2" fill="#888888">MONOCHROME 35MM ARCHIVE</text>
+</svg>

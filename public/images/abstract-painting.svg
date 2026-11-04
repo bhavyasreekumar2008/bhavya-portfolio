@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 800" width="100%" height="100%">
+  <defs>
+    <linearGradient id="canvasBase" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EBE6DE" />
+      <stop offset="40%" stop-color="#DCD4C7" />
+      <stop offset="80%" stop-color="#C8B79E" />
+      <stop offset="100%" stop-color="#B8A48A" />
+    </linearGradient>
+    <filter id="canvasNoise">
+      <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="4" result="noise" />
+      <feColorMatrix type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 0.15 0" />
+      <feComposite in2="SourceGraphic" in="glitch" operator="in" />
+    </filter>
+  </defs>
+
+  <!-- Fine art paper mat -->
+  <rect width="1000" height="800" fill="#F4F4F1" />
+  <rect x="50" y="50" width="900" height="700" fill="none" stroke="#D9D9D6" stroke-width="1.5" />
+
+  <!-- Abstract Expressionist Composition with Warm Taupe & Earthy Palettes -->
+  <g transform="translate(100, 100)">
+    <rect width="800" height="600" fill="url(#canvasBase)" />
+    <!-- Impasto texture blocks -->
+    <rect x="40" y="40" width="340" height="420" fill="#D9CCBA" opacity="0.85" />
+    <rect x="320" y="120" width="420" height="380" fill="#A8967E" opacity="0.65" />
+    <rect x="180" y="240" width="360" height="280" fill="#F7F5F0" opacity="0.9" />
+
+    <!-- Gestural charcoal & raw sienna marks -->
+    <path d="M 80,180 Q 220,90 380,210 T 700,160" fill="none" stroke="#3A3530" stroke-width="8" stroke-linecap="round" opacity="0.6" />
+    <path d="M 120,440 C 260,380 400,520 620,410" fill="none" stroke="#1E1C1A" stroke-width="5" stroke-linecap="round" opacity="0.75" />
+    <line x1="260" y1="60" x2="260" y2="520" stroke="#7A6C58" stroke-width="3" stroke-dasharray="12,8" opacity="0.5" />
+    
+    <!-- White impasto knife scrapes -->
+    <polygon points="400,180 580,160 560,320 380,340" fill="#FFFFFF" opacity="0.7" />
+    <polygon points="140,280 280,310 240,400 120,380" fill="#E2DDD5" opacity="0.8" />
+  </g>
+
+  <!-- Editorial Meta -->
+  <text x="100" y="745" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="700" letter-spacing="3" fill="#111111">EXHIBIT // ABSTRACT EXPRESSION NO. 04</text>
+  <text x="900" y="745" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="11" letter-spacing="2" fill="#6B6B6B">EARTH PIGMENT &amp; RESIN ON LINEN</text>
+</svg>
