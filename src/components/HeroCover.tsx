@@ -201,10 +201,10 @@ export default function HeroCover() {
             className="flex flex-row items-center gap-3 pt-1 flex-wrap"
           >
             <a
-              href="#projects"
+              href="#about"
               className="group inline-flex items-center justify-center gap-2 px-5 sm:px-6 py-2.5 sm:py-3 rounded-xl font-semibold text-xs tracking-wider capitalize text-black bg-gradient-to-r from-amber-300 via-yellow-400 to-amber-500 hover:from-amber-200 hover:to-amber-400 shadow-[0_4px_20px_rgba(245,158,11,0.35)] hover:shadow-[0_6px_25px_rgba(245,158,11,0.5)] transition-all duration-300 whitespace-nowrap"
             >
-              <span>Explore Works</span>
+              <span>Explore Monograph</span>
               <ChevronRight size={14} className="group-hover:translate-x-1 transition-transform" />
             </a>
 

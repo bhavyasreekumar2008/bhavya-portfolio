@@ -20,17 +20,19 @@ export default function Home() {
       {/* 03. About Me Spread (Copying Reference "About Me" layout) */}
       <AboutSection />
 
-      {/* 04. Selected Works / Project Spreads (3 Curated Spreads, Alternating Layouts) */}
-      <section id="projects" className="w-full flex flex-col items-center">
-        {portfolioData.projects.map((project, idx) => (
-          <ProjectSpread
-            key={project.id}
-            project={project}
-            index={idx}
-            total={portfolioData.projects.length}
-          />
-        ))}
-      </section>
+      {/* 04. Selected Works (Only rendered if projects exist) */}
+      {portfolioData.projects.length > 0 && (
+        <section id="projects" className="w-full flex flex-col items-center">
+          {portfolioData.projects.map((project, idx) => (
+            <ProjectSpread
+              key={project.id}
+              project={project}
+              index={idx}
+              total={portfolioData.projects.length}
+            />
+          ))}
+        </section>
+      )}
 
       {/* 05. Skills Typographic Matrix (Minimalist Rows, No Colorful Meters) */}
       <SkillsSection />
