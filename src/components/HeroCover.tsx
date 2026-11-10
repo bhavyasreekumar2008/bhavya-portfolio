@@ -98,11 +98,7 @@ export default function HeroCover() {
     <section
       ref={containerRef}
       id="hero"
-      className="relative min-h-[92vh] sm:min-h-screen w-full overflow-hidden flex items-center justify-center py-8 sm:py-16 lg:py-0"
-      style={{
-        background:
-          "linear-gradient(135deg, #0b0a07 0%, #18140c 35%, #251d10 70%, #0f0d08 100%)",
-      }}
+      className="relative min-h-[92vh] sm:min-h-screen w-full overflow-hidden flex items-center justify-center py-8 sm:py-16 lg:py-0 golden-page-bg transition-colors"
     >
       {/* Floating Golden Micro-Particles */}
       <GoldenParticleField />
@@ -146,45 +142,29 @@ export default function HeroCover() {
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-amber-400/30 bg-amber-500/[0.08] backdrop-blur-md shadow-[0_0_15px_rgba(212,175,55,0.15)] max-w-full"
+            className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-amber-500/30 bg-amber-500/[0.08] backdrop-blur-md shadow-[0_0_15px_rgba(212,175,55,0.15)] max-w-full"
           >
             <span className="relative flex h-2 w-2 shrink-0">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-amber-400"></span>
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-500 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-amber-500"></span>
             </span>
-            <span className="text-[10px] sm:text-[11px] font-mono tracking-wider text-amber-200/90 font-semibold uppercase truncate">
+            <span className="text-[10px] sm:text-[11px] font-mono tracking-wider text-[#6B5B3E] dark:text-amber-200/90 font-semibold uppercase truncate">
               B.Tech CSE (AI) · Thejus Engg College
             </span>
           </motion.div>
 
-          {/* Large Name with Golden Metallic Linear Gradient */}
+          {/* Large Name in Dark Color (with dark mode support) */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
             className="space-y-0.5 sm:space-y-1 w-full"
           >
-            <h1 className="font-extrabold tracking-tight uppercase leading-[0.94] break-words">
-              <span
-                className="block text-4xl xs:text-5xl sm:text-6xl md:text-7xl lg:text-8xl drop-shadow-sm"
-                style={{
-                  background:
-                    "linear-gradient(135deg, #FFFDF5 0%, #FDE68A 30%, #D4AF37 60%, #F59E0B 100%)",
-                  WebkitBackgroundClip: "text",
-                  WebkitTextFillColor: "transparent",
-                }}
-              >
+            <h1 className="font-extrabold tracking-tight uppercase leading-[0.94] break-words text-[#1A150B] dark:text-[#FDF9F0]">
+              <span className="block text-4xl xs:text-5xl sm:text-6xl md:text-7xl lg:text-8xl drop-shadow-sm">
                 BHAVYA
               </span>
-              <span
-                className="block text-4xl xs:text-5xl sm:text-6xl md:text-7xl lg:text-8xl drop-shadow-sm"
-                style={{
-                  background:
-                    "linear-gradient(135deg, #FFFDF5 0%, #FDE68A 30%, #D4AF37 60%, #F59E0B 100%)",
-                  WebkitBackgroundClip: "text",
-                  WebkitTextFillColor: "transparent",
-                }}
-              >
+              <span className="block text-4xl xs:text-5xl sm:text-6xl md:text-7xl lg:text-8xl drop-shadow-sm">
                 SREEKUMAR
               </span>
             </h1>
@@ -197,8 +177,8 @@ export default function HeroCover() {
             transition={{ duration: 0.7, delay: 0.3 }}
             className="flex items-center gap-2.5 sm:gap-3"
           >
-            <span className="h-0.5 w-7 sm:w-10 bg-gradient-to-r from-amber-400 to-amber-600 rounded-full shrink-0" />
-            <p className="text-sm sm:text-base lg:text-xl font-medium tracking-wide text-amber-100/90">
+            <span className="h-0.5 w-7 sm:w-10 bg-gradient-to-r from-amber-500 to-amber-700 rounded-full shrink-0" />
+            <p className="text-sm sm:text-base lg:text-xl font-medium tracking-wide text-[#6B5B3E] dark:text-amber-100/90">
               AI Student · Algorithmic Builder · Curious by Default
             </p>
           </motion.div>
@@ -208,7 +188,7 @@ export default function HeroCover() {
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.4 }}
-            className="text-xs sm:text-sm text-neutral-300/80 leading-relaxed max-w-xl font-light"
+            className="text-xs sm:text-sm text-[#55452D] dark:text-neutral-300/80 leading-relaxed max-w-xl font-light"
           >
             Passionate first-year Computer Science &amp; Artificial Intelligence student based in Thrissur, Kerala. Deconstructing deep neural networks, engineering bare-metal algorithms, and crafting high-precision digital experiences.
           </motion.p>
@@ -293,33 +273,20 @@ export default function HeroCover() {
             initial={{ opacity: 0, y: 25 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="relative z-10 w-44 sm:w-60 md:w-68 aspect-[3/4] rounded-2xl p-[2.5px] sm:p-[3px] bg-gradient-to-tr from-amber-500 via-yellow-200 to-amber-700 shadow-[0_15px_40px_rgba(0,0,0,0.65),0_0_25px_rgba(212,175,55,0.22)] group"
+            className="relative z-10 w-48 sm:w-64 md:w-72 aspect-[3/4] rounded-2xl p-[2.5px] sm:p-[3px] bg-gradient-to-tr from-amber-500 via-yellow-200 to-amber-700 shadow-[0_15px_40px_rgba(0,0,0,0.45),0_0_25px_rgba(212,175,55,0.25)] group"
           >
-            <div className="relative w-full h-full rounded-[13px] overflow-hidden bg-neutral-950">
+            <div className="relative w-full h-full rounded-[13px] overflow-hidden bg-neutral-900">
               <Image
                 src="/images/bhavya-profile.jpg"
                 alt="Bhavya Sreekumar - AI & CSE Student"
                 fill
                 priority
                 unoptimized
-                className="object-cover object-top filter contrast-[1.03] group-hover:scale-105 transition-transform duration-700 ease-out"
+                className="object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
               />
 
-              {/* Subtle Golden Inner Vignette */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-amber-500/10 pointer-events-none" />
-
-              {/* Bottom Photo Title Plate */}
-              <div className="absolute bottom-0 inset-x-0 p-2.5 sm:p-3 bg-gradient-to-t from-black/90 via-black/50 to-transparent flex items-center justify-between">
-                <div>
-                  <span className="block text-[9px] sm:text-[10px] font-mono tracking-widest text-amber-300/80 uppercase">
-                    Bhavya Sreekumar
-                  </span>
-                  <span className="block text-[8px] sm:text-[9px] font-mono text-neutral-400">
-                    B.Tech CSE (AI)
-                  </span>
-                </div>
-                <Sparkles size={13} className="text-amber-400 animate-pulse" />
-              </div>
+              {/* Subtle Golden Inner Border Highlight */}
+              <div className="absolute inset-0 rounded-[13px] border border-amber-300/20 pointer-events-none" />
             </div>
 
             {/* ─── Layer 3: Overlapping Floating Glass Cards (Overlapping Photo & 3D scene) ─── */}

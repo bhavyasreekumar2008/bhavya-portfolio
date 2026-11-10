@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { Sun, Moon } from "lucide-react";
 
 export default function ThemeToggle() {
   const [isDark, setIsDark] = useState(false);
@@ -35,12 +36,10 @@ export default function ThemeToggle() {
   return (
     <button
       onClick={toggleTheme}
-      className="group flex items-center gap-2 border border-amber-400/40 dark:border-amber-500/30 bg-amber-500/10 hover:bg-amber-500/20 px-3 py-1 text-[11px] font-mono tracking-widest text-[#1A150B] dark:text-[#FDF9F0] rounded-full transition-all"
+      className="flex items-center justify-center h-8 w-8 border border-amber-400/30 hover:border-amber-400/60 hover:bg-amber-400/10 text-amber-300/70 hover:text-amber-200 rounded-lg transition-all duration-300"
       aria-label="Toggle theme mode"
     >
-      <span className="inline-block h-1.5 w-1.5 rounded-full bg-amber-400 shadow-[0_0_6px_rgba(245,158,11,0.8)]" />
-      <span>{isDark ? "DARK GOLD" : "LIGHT GOLD"}</span>
+      {isDark ? <Sun size={15} /> : <Moon size={15} />}
     </button>
   );
 }
-
