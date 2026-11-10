@@ -201,7 +201,7 @@ export const portfolioData: PortfolioData = {
       stack: ["Python", "OpenCV", "NumPy", "Matplotlib"],
       githubUrl: "https://github.com/bhavyasreekumar/neural-vision-system",
       liveUrl: "https://github.com/bhavyasreekumar/neural-vision-system",
-      image: "/images/project-1-sculpture.jpg",
+      image: "/images/project-1-sculpture.svg",
       accentColor: "#C8B79E",
       stats: [
         { label: "KERNEL OPS", value: "60 FPS" },
@@ -223,7 +223,7 @@ export const portfolioData: PortfolioData = {
       stack: ["C", "Algorithms", "Memory Profiling", "Python Scripts"],
       githubUrl: "https://github.com/bhavyasreekumar/algo-graph-engine",
       liveUrl: "https://github.com/bhavyasreekumar/algo-graph-engine",
-      image: "/images/project-2-geometric.jpg",
+      image: "/images/project-2-geometric.svg",
       accentColor: "#B5A795",
       stats: [
         { label: "MAX NODES", value: "100K+" },
@@ -245,7 +245,7 @@ export const portfolioData: PortfolioData = {
       stack: ["Next.js", "TypeScript", "Tailwind CSS", "Vector Search"],
       githubUrl: "https://github.com/bhavyasreekumar/intelligent-agent-lab",
       liveUrl: "https://github.com/bhavyasreekumar/intelligent-agent-lab",
-      image: "/images/project-3-knot.jpg",
+      image: "/images/project-3-knot.svg",
       accentColor: "#A39785",
       stats: [
         { label: "EMBEDDING DIM", value: "384-D" },

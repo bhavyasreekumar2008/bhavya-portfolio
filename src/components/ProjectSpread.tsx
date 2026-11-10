@@ -43,9 +43,8 @@ export default function ProjectSpread({ project, index, total }: ProjectSpreadPr
 
           {/* COLUMN 1: Visual plate or narrative */}
           <div
-            className={`flex flex-col justify-between ${
-              isEven ? "order-1 pr-0 lg:pr-8" : "order-2 lg:order-1 pr-0 lg:pr-8"
-            }`}
+            className={`flex flex-col justify-between ${isEven ? "order-1 pr-0 lg:pr-8" : "order-2 lg:order-1 pr-0 lg:pr-8"
+              }`}
           >
             {isEven ? (
               /* PRIMARY VISUAL PLATE */
@@ -154,11 +153,10 @@ export default function ProjectSpread({ project, index, total }: ProjectSpreadPr
 
           {/* COLUMN 2: Alternating page (Narrative or Plate) */}
           <div
-            className={`flex flex-col justify-between ${
-              isEven
+            className={`flex flex-col justify-between ${isEven
                 ? "order-2 pl-0 lg:pl-8 border-t lg:border-t-0 border-amber-300/30 dark:border-amber-500/20 pt-6 lg:pt-0"
                 : "order-1 lg:order-2 pl-0 lg:pl-8 border-t lg:border-t-0 border-amber-300/30 dark:border-amber-500/20 pt-6 lg:pt-0"
-            }`}
+              }`}
           >
             {isEven ? (
               /* NARRATIVE TEXT PAGE FOR EVEN */

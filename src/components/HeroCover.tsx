@@ -135,7 +135,7 @@ export default function HeroCover() {
 
       {/* Main Content Container - fully responsive mobile padding & flow */}
       <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-6 sm:py-10 flex flex-col lg:flex-row items-center justify-between gap-10 lg:gap-8">
-        
+
         {/* ─── LEFT COLUMN: Modern Editorial Intro (52%) ─── */}
         <motion.div
           style={{ y: textParallaxY, opacity: fadeOutOnScroll }}
@@ -213,16 +213,16 @@ export default function HeroCover() {
             Passionate first-year Computer Science &amp; Artificial Intelligence student based in Thrissur, Kerala. Deconstructing deep neural networks, engineering bare-metal algorithms, and crafting high-precision digital experiences.
           </motion.p>
 
-          {/* Action CTAs - nicely responsive on mobile */}
+          {/* Action CTAs - always on one row */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.5 }}
-            className="flex flex-col xs:flex-row w-full sm:w-auto items-stretch xs:items-center gap-3 pt-1"
+            className="flex flex-row items-center gap-3 pt-1 flex-wrap"
           >
             <a
               href="#projects"
-              className="group inline-flex items-center justify-center gap-2 px-5 sm:px-6 py-2.5 sm:py-3 rounded-xl font-semibold text-xs tracking-wider uppercase text-black bg-gradient-to-r from-amber-300 via-yellow-400 to-amber-500 hover:from-amber-200 hover:to-amber-400 shadow-[0_4px_20px_rgba(245,158,11,0.35)] hover:shadow-[0_6px_25px_rgba(245,158,11,0.5)] transition-all duration-300"
+              className="group inline-flex items-center justify-center gap-2 px-5 sm:px-6 py-2.5 sm:py-3 rounded-xl font-semibold text-xs tracking-wider capitalize text-black bg-gradient-to-r from-amber-300 via-yellow-400 to-amber-500 hover:from-amber-200 hover:to-amber-400 shadow-[0_4px_20px_rgba(245,158,11,0.35)] hover:shadow-[0_6px_25px_rgba(245,158,11,0.5)] transition-all duration-300 whitespace-nowrap"
             >
               <span>Explore Works</span>
               <ChevronRight size={14} className="group-hover:translate-x-1 transition-transform" />
@@ -230,7 +230,7 @@ export default function HeroCover() {
 
             <a
               href="#contact"
-              className="inline-flex items-center justify-center gap-2 px-5 sm:px-6 py-2.5 sm:py-3 rounded-xl font-medium text-xs tracking-wider uppercase text-amber-200/90 border border-amber-400/30 bg-amber-500/[0.05] hover:bg-amber-500/[0.15] hover:border-amber-400/60 transition-all duration-300 backdrop-blur-sm"
+              className="inline-flex items-center justify-center gap-2 px-5 sm:px-6 py-2.5 sm:py-3 rounded-xl font-medium text-xs tracking-wider capitalize text-amber-200/90 border border-amber-400/30 bg-amber-500/[0.05] hover:bg-amber-500/[0.15] hover:border-amber-400/60 transition-all duration-300 backdrop-blur-sm whitespace-nowrap"
             >
               <span>Contact Dispatch</span>
             </a>
@@ -301,9 +301,10 @@ export default function HeroCover() {
                 alt="Bhavya Sreekumar - AI & CSE Student"
                 fill
                 priority
+                unoptimized
                 className="object-cover object-top filter contrast-[1.03] group-hover:scale-105 transition-transform duration-700 ease-out"
               />
-              
+
               {/* Subtle Golden Inner Vignette */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-amber-500/10 pointer-events-none" />
 
@@ -322,7 +323,7 @@ export default function HeroCover() {
             </div>
 
             {/* ─── Layer 3: Overlapping Floating Glass Cards (Overlapping Photo & 3D scene) ─── */}
-            
+
             {/* Overlap Card 1: Top-Right Overlapping Badge (Mobile Safe Positioning) */}
             <motion.div
               initial={{ opacity: 0, x: 15 }}
