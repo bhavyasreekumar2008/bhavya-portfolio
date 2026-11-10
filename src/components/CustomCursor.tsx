@@ -77,16 +77,17 @@ export default function CustomCursor() {
         width: cursorText ? 68 : isHovered ? 28 : 8,
         height: cursorText ? 68 : isHovered ? 28 : 8,
         backgroundColor: cursorText
-          ? "rgba(17, 17, 17, 0.92)"
+          ? "rgba(18, 14, 8, 0.95)"
           : isHovered
           ? "transparent"
-          : "var(--ink-primary)",
-        border: isHovered && !cursorText ? "1.5px solid var(--ink-primary)" : "none",
-        backdropFilter: cursorText ? "blur(4px)" : "none",
+          : "#D4AF37",
+        border: isHovered && !cursorText ? "2px solid #D4AF37" : "none",
+        boxShadow: isHovered ? "0 0 15px rgba(212, 175, 55, 0.4)" : "none",
+        backdropFilter: cursorText ? "blur(6px)" : "none",
       }}
     >
       {cursorText && (
-        <span className="text-[10px] font-bold tracking-[0.2em] text-[#F6F6F4] select-none">
+        <span className="text-[10px] font-bold tracking-[0.2em] text-amber-300 select-none">
           {cursorText}
         </span>
       )}

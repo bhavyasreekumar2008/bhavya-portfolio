@@ -2,42 +2,45 @@
 
 @layer base {
   :root {
-    --canvas-bg: #EDEDED;
-    --surface-paper: #F6F6F4;
-    --surface-paper-secondary: #EFEFEA;
-    --ink-primary: #111111;
-    --pencil-secondary: #6B6B6B;
-    --hairline: #D9D9D6;
-    --hairline-subtle: #E8E8E4;
-    --accent-taupe: #C8B79E;
-    --accent-taupe-dark: #A9957B;
-    --accent-taupe-light: #E8DFD3;
-    --shadow-spine: inset 10px 0 20px -10px rgba(0, 0, 0, 0.08), inset -10px 0 20px -10px rgba(0, 0, 0, 0.08);
+    --canvas-bg: #F8F2E2;
+    --canvas-gradient: linear-gradient(135deg, #FAF4E7 0%, #F4E6CA 30%, #EBD5A5 70%, #F8EFD7 100%);
+    --surface-paper: #FAF4E6;
+    --surface-paper-secondary: #F2E3C6;
+    --ink-primary: #1A150B;
+    --pencil-secondary: #6B5B3E;
+    --hairline: #DFCBA4;
+    --hairline-subtle: #EBDDC2;
+    --accent-taupe: #D4AF37;
+    --accent-taupe-dark: #AA771C;
+    --accent-taupe-light: #FDF7EA;
+    --shadow-spine: inset 10px 0 20px -10px rgba(170, 119, 28, 0.12), inset -10px 0 20px -10px rgba(170, 119, 28, 0.12);
   }
 
   .dark {
-    --canvas-bg: #0E0E0E;
-    --surface-paper: #161616;
-    --surface-paper-secondary: #1F1F1F;
-    --ink-primary: #F2F2F0;
-    --pencil-secondary: #9E9E99;
-    --hairline: #2A2A28;
-    --hairline-subtle: #222220;
-    --accent-taupe: #D2C4B0;
-    --accent-taupe-dark: #B0A08B;
-    --accent-taupe-light: #3D372E;
-    --shadow-spine: inset 10px 0 20px -10px rgba(0, 0, 0, 0.4), inset -10px 0 20px -10px rgba(0, 0, 0, 0.4);
+    --canvas-bg: #0D0B08;
+    --canvas-gradient: linear-gradient(135deg, #0d0b07 0%, #17130a 35%, #251d10 70%, #100e08 100%);
+    --surface-paper: #17130c;
+    --surface-paper-secondary: #221a10;
+    --ink-primary: #FDF9F0;
+    --pencil-secondary: #C4AD86;
+    --hairline: #3D331F;
+    --hairline-subtle: #2C2415;
+    --accent-taupe: #E5C158;
+    --accent-taupe-dark: #C5A059;
+    --accent-taupe-light: #2B2213;
+    --shadow-spine: inset 10px 0 20px -10px rgba(0, 0, 0, 0.5), inset -10px 0 20px -10px rgba(0, 0, 0, 0.5);
   }
 
   html {
-    scroll-behavior: auto; /* Handled smoothly by Lenis */
-    background-color: var(--canvas-bg);
+    scroll-behavior: auto;
+    /* Handled smoothly by Lenis */
+    background: var(--canvas-gradient) fixed;
     color: var(--ink-primary);
     font-feature-settings: "cv02", "cv03", "cv04", "cv11";
   }
 
   body {
-    background-color: var(--canvas-bg);
+    background: var(--canvas-gradient) fixed;
     color: var(--ink-primary);
     overflow-x: hidden;
     selection-background-color: var(--accent-taupe);
@@ -45,7 +48,23 @@
   }
 }
 
-/* Swiss Editorial Micro-Typography & Grid Utilities */
+/* ── Golden Gradient Utilities ────────────────────────────── */
+.golden-page-bg {
+  background: var(--canvas-gradient) fixed !important;
+}
+
+.golden-text-gradient {
+  background: linear-gradient(135deg, #FFFDF5 0%, #FDE68A 30%, #D4AF37 60%, #F59E0B 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.golden-border {
+  border-color: rgba(212, 175, 55, 0.35) !important;
+}
+
+/* ── Swiss Editorial Micro-Typography & Grid Utilities ──── */
 .tracking-display {
   letter-spacing: -0.045em;
 }
@@ -54,9 +73,17 @@
   letter-spacing: 0.18em;
 }
 
+/* Linear Gradient Golden Cards & Spreads */
 .book-spread {
-  background-color: var(--surface-paper);
-  box-shadow: 0 20px 45px -15px rgba(0, 0, 0, 0.07), 0 0 1px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(145deg, rgba(255, 253, 248, 0.96) 0%, rgba(251, 244, 230, 0.94) 50%, rgba(246, 234, 210, 0.92) 100%);
+  border-color: rgba(212, 175, 55, 0.4);
+  box-shadow: 0 20px 45px -15px rgba(184, 134, 11, 0.14), 0 0 1px rgba(212, 175, 55, 0.3);
+}
+
+.dark .book-spread {
+  background: linear-gradient(145deg, rgba(24, 20, 13, 0.96) 0%, rgba(33, 27, 17, 0.94) 50%, rgba(19, 15, 10, 0.92) 100%);
+  border-color: rgba(212, 175, 55, 0.3);
+  box-shadow: 0 20px 45px -15px rgba(0, 0, 0, 0.65), 0 0 20px rgba(212, 175, 55, 0.08);
 }
 
 .book-gutter-spine {
@@ -80,22 +107,27 @@
 .gallery-image-frame {
   position: relative;
   overflow: hidden;
-  background-color: #EAEAEA;
+  background: linear-gradient(135deg, #F3E5CB 0%, #EBD5A5 100%);
+  border-color: rgba(212, 175, 55, 0.3);
+}
+
+.dark .gallery-image-frame {
+  background: linear-gradient(135deg, #1f1910 0%, #15110a 100%);
+  border-color: rgba(212, 175, 55, 0.25);
 }
 
 .gallery-image-frame img,
 .gallery-image-frame svg {
-  filter: grayscale(100%) contrast(105%);
+  filter: contrast(102%);
   transition: filter 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .gallery-image-frame:hover img,
 .gallery-image-frame:hover svg {
-  filter: grayscale(0%) contrast(100%);
   transform: scale(1.025);
 }
 
-/* Swiss Underline Slide on Hover */
+/* Swiss Underline Slide on Hover with Golden Glow */
 .swiss-link {
   position: relative;
   display: inline-block;
@@ -108,8 +140,8 @@
   bottom: -2px;
   left: 0;
   width: 100%;
-  height: 1px;
-  background-color: currentColor;
+  height: 1.5px;
+  background: linear-gradient(90deg, #D4AF37, #F59E0B);
   transform: scaleX(0);
   transform-origin: right bottom;
   transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
@@ -122,7 +154,7 @@
 
 /* Custom Scrollbar for Catalog */
 ::-webkit-scrollbar {
-  width: 5px;
+  width: 6px;
 }
 
 ::-webkit-scrollbar-track {
@@ -130,16 +162,12 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--hairline);
+  background: #D4AF37;
+  border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--pencil-secondary);
-}
-
-/* Print simulation textures */
-.editorial-grid-line {
-  background-color: var(--hairline);
+  background: #B8860B;
 }
 
 /* Custom Cursor styles */
@@ -151,14 +179,15 @@
   z-index: 9999;
   border-radius: 9999px;
   transform: translate(-50%, -50%);
-  transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1), 
-              height 0.3s cubic-bezier(0.16, 1, 0.3, 1), 
-              background-color 0.2s, 
-              border 0.2s;
+  transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+    height 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+    background-color 0.2s,
+    border 0.2s;
 }
 
 /* Lenis Recommended CSS */
-html.lenis, html.lenis body {
+html.lenis,
+html.lenis body {
   height: auto;
 }
 

@@ -91,7 +91,7 @@ export const portfolioData: PortfolioData = {
     location: "Thrissur, Kerala, India",
     tagline: "AI STUDENT. BUILDER. CURIOUS BY DEFAULT.",
     bio: "First-year computer science engineering student specializing in Artificial Intelligence at Thejus Engineering College, Thrissur. Driven by an innate curiosity to deconstruct complex algorithms and synthesize intelligent systems with architectural precision. Focused on machine learning foundations, clean algorithmic structures, and purposeful computational design.",
-    portraitImage: "/images/portrait-bhavya.jpg",
+    portraitImage: "/images/bhavya-profile.jpg",
     catalogYear: "2026 // VOL. I",
     volume: "VOL. 01 — DEPT. OF AI & COMPUTING",
     curatorNote: "Monograph catalog documenting foundational engineering pursuits, algorithmic experiments, and selected computational works.",

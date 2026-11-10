@@ -35,11 +35,11 @@ export default function ThemeToggle() {
   return (
     <button
       onClick={toggleTheme}
-      className="group flex items-center gap-2 border border-[#D9D9D6] dark:border-[#2A2A28] bg-transparent px-2.5 py-1 text-[11px] font-mono tracking-widest text-[#111111] dark:text-[#F2F2F0] transition-colors hover:border-[#111111] dark:hover:border-[#F2F2F0]"
+      className="group flex items-center gap-2 border border-amber-400/40 dark:border-amber-500/30 bg-amber-500/10 hover:bg-amber-500/20 px-3 py-1 text-[11px] font-mono tracking-widest text-[#1A150B] dark:text-[#FDF9F0] rounded-full transition-all"
       aria-label="Toggle theme mode"
     >
-      <span className="inline-block h-1.5 w-1.5 rounded-full bg-[#C8B79E]" />
-      <span>{isDark ? "THEME: DARK" : "THEME: LIGHT"}</span>
+      <span className="inline-block h-1.5 w-1.5 rounded-full bg-amber-400 shadow-[0_0_6px_rgba(245,158,11,0.8)]" />
+      <span>{isDark ? "DARK GOLD" : "LIGHT GOLD"}</span>
     </button>
   );
 }

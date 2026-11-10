@@ -71,8 +71,8 @@ export const metadata: Metadata = {
 
 export const viewport: Viewport = {
   themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#EDEDED" },
-    { media: "(prefers-color-scheme: dark)", color: "#0E0E0E" },
+    { media: "(prefers-color-scheme: light)", color: "#F8F2E2" },
+    { media: "(prefers-color-scheme: dark)", color: "#0D0B08" },
   ],
   width: "device-width",
   initialScale: 1,
@@ -85,7 +85,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${inter.variable} ${spaceMono.variable} antialiased`}>
-      <body className="min-h-screen bg-[#EDEDED] dark:bg-[#0E0E0E] text-[#111111] dark:text-[#F2F2F0] selection:bg-[#C8B79E] selection:text-[#111111] font-sans">
+      <body className="min-h-screen golden-page-bg text-[#1A150B] dark:text-[#FDF9F0] selection:bg-[#D4AF37] selection:text-black font-sans">
         <SmoothScroll>
           <ScrollProgress />
           <CustomCursor />
